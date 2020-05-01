@@ -11,4 +11,5 @@ RUN npm run build
 #nginx picks files from /usr/share/nginx/html/
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /apps/frontend/build /usr/share/nginx/html
